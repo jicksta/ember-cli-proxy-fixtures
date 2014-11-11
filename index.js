@@ -7,7 +7,7 @@ var middleware = require('./lib/middleware');
 module.exports = {
   name: 'ember-cli-proxy-fixtures',
   validEnv: function() {
-    return this.app.env !== 'production' && this.app.env !== 'staging';
+    return this.app.env === 'test';
   },
   treeForVendor: function() {
     if(!this.validEnv()) { return; }
